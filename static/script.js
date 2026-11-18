@@ -27,3 +27,37 @@ function calcularSubtracao() {
         document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
     });
 }
+
+function calcularMultiplicacao() {
+    const valor1 = document.getElementById("valor1").value;
+    const valor2 = document.getElementById("valor2").value;
+
+    fetch("/api/multiplicacao", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ valor1: valor1, valor2: valor2 })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
+    });
+}
+
+function calcularDivisao() {
+    const valor1 = document.getElementById("valor1").value;
+    const valor2 = document.getElementById("valor2").value;
+
+    fetch("/api/divisao", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ valor1: valor1, valor2: valor2 })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.erro) {
+            document.getElementById("resultado").innerText = data.erro;
+        } else {
+            document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
+        }
+    });
+}
