@@ -2,16 +2,18 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Página Inicial</title>
+    <title>Pagina Inicial</title>
 </head>
 <body>
     <nav>
-        <a href="{{ url_for('index') }}">Início</a> |
+        <a href="{{ url_for('index') }}">Inicio</a> |
         <a href="{{ url_for('soma_page') }}">Soma</a> |
-        <a href="{{ url_for('subtracao_page') }}">Subtração</a>
+        <a href="{{ url_for('subtracao_page') }}">Subtracao</a> |
+        <a href="{{ url_for('multiplicacao_page') }}">Multiplicacao</a> |
+        <a href="{{ url_for('divisao_page') }}">Divisao</a> | 
     </nav>
 
-    <h1>Bem-vindo à Calculadora Modularizada</h1>
-    <p>Escolha uma operação no menu acima.</p>
+    <h1>Bem-vindo a Calculadora Modularizada</h1>
+    <p>Escolha uma operacao no menu acima.</p>
 </body>
 </html>

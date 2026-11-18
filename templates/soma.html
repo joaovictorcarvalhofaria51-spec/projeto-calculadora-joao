@@ -7,12 +7,14 @@
 </head>
 <body>
     <nav>
-        <a href="{{ url_for('index') }}">Início</a> |
+        <a href="{{ url_for('index') }}">Inicio</a> |
         <a href="{{ url_for('soma_page') }}">Soma</a> |
-        <a href="{{ url_for('subtracao_page') }}">Subtração</a>
+        <a href="{{ url_for('subtracao_page') }}">Subtracao</a>|
+        <a href="{{ url_for('multiplicacao_page') }}">Multiplicação</a> |
+        <a href="{{ url_for('divisao_page') }}">Divisao</a> |
     </nav>
 
-    <h1>Operação de Soma</h1>
+    <h1>Operacao de Soma</h1>
     <input type="number" id="valor1"><br><br>
     <input type="number" id="valor2"><br><br>
     <button onclick="calcularSoma()">Calcular Soma</button>
